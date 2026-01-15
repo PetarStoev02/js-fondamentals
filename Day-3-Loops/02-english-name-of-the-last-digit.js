@@ -1,0 +1,40 @@
+/*
+Day 3 - Loops
+Exercise: 02. English Name of the Last Digit
+
+Instructions:
+- Run this file with Node.js: node "02. English Name of the Last Digit.js"
+- Read the code and try to understand what it does
+- Modify or complete the exercise as needed
+
+Hint: Check console.log outputs to verify your solution
+*/
+
+
+function solve(num) {
+  let lastDigit = num.toString().split("");
+  lastDigit = lastDigit.reverse();
+
+  if (lastDigit[0] == 1) {
+    console.log("one");
+  } else if (lastDigit[0] == 2) {
+    console.log("two");
+  } else if (lastDigit[0] == 3) {
+    console.log("three");
+  } else if (lastDigit[0] == 4) {
+    console.log("four");
+  } else if (lastDigit[0] == 5) {
+    console.log("five");
+  } else if (lastDigit[0] == 6) {
+    console.log("six");
+  } else if (lastDigit[0] == 7) {
+    console.log("seven");
+  } else if (lastDigit[0] == 8) {
+    console.log("eight");
+  } else if (lastDigit[0] == 9) {
+    console.log("nine");
+  } else if (lastDigit[0] == 0) {
+    console.log("zero");
+  }
+}
+solve(1640);

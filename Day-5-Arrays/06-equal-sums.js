@@ -1,0 +1,41 @@
+/*
+Day 5 - Arrays
+Exercise: 06. Equal Sums
+
+Instructions:
+- Run this file with Node.js: node "06. Equal Sums.js"
+- Read the code and try to understand what it does
+- Modify or complete the exercise as needed
+
+Hint: Check console.log outputs to verify your solution
+*/
+
+
+function solve(arr) {
+  let isIndex = false;
+
+  for (i = 0; i < arr.length; i++) {
+    let leftSum = 0;
+    let rightSum = 0;
+    if (i !== 0) {
+      for (let j = 0; j < i; j++) {
+        leftSum += arr[j];
+      }
+    }
+
+    if (i !== arr.length - 1) {
+      for (let k = i + 1; k < arr.length; k++) {
+        rightSum += arr[k];
+      }
+    }
+
+    if (leftSum === rightSum) {
+      isIndex = true;
+      console.log(i);
+    }
+  }
+  if (!isIndex) {
+    console.log("no");
+  }
+}
+solve([1, 2, 3, 3]);
